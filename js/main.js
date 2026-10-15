@@ -1,6 +1,6 @@
 // Small enhancements only — the site works fine without JavaScript.
 
-// ---------- Light / dark theme toggle ----------
+// ---------- Light / dark theme toggle (text link in the footer) ----------
 const themeToggle = document.querySelector(".theme-toggle");
 
 function getStoredTheme() {
@@ -20,8 +20,7 @@ function applyTheme(theme) {
     (!document.documentElement.hasAttribute("data-theme") &&
       window.matchMedia("(prefers-color-scheme: dark)").matches);
   if (themeToggle) {
-    themeToggle.textContent = isDark ? "☀" : "☾";
-    themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+    themeToggle.textContent = isDark ? "lights on" : "lights off";
   }
   return isDark;
 }
@@ -40,17 +39,6 @@ if (themeToggle) {
   });
 }
 
-// ---------- Mobile navigation ----------
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
-
-if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", open);
-  });
-}
-
 // ---------- Highlight current page in the nav ----------
 const currentPage = document.body.dataset.page;
 
@@ -66,8 +54,8 @@ document.querySelectorAll(".year").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
-// ---------- Blog tag filter ----------
-const filterButtons = document.querySelectorAll(".tag-filter button");
+// ---------- Blog filter ----------
+const filterButtons = document.querySelectorAll(".filter button");
 const posts = document.querySelectorAll("[data-tags]");
 
 filterButtons.forEach((button) => {

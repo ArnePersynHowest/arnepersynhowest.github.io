@@ -12,90 +12,89 @@
 
 <body data-page="cv">
   <header class="site-header">
-    <div class="container">
-      <a class="logo" href="../index.html">Arne Persyn</a>
+    <div class="wrap">
+      <a class="name" href="../index.html">Arne Persyn</a>
       <nav class="nav" aria-label="Main">
-        <a href="../index.html" data-page="home">Home</a>
-        <a href="about.html" data-page="about">About</a>
-        <a href="projects.html" data-page="projects">Projects</a>
-        <a href="blog.html" data-page="blog">Blog</a>
-        <a href="cv.html" data-page="cv">CV</a>
-        <a href="contact.html" data-page="contact">Contact</a>
+        <a href="about.html" data-page="about">about</a>
+        <a href="projects.html" data-page="projects">work</a>
+        <a href="blog.html" data-page="blog">writing</a>
+        <a href="cv.html" data-page="cv">cv</a>
+        <a href="contact.html" data-page="contact">contact</a>
       </nav>
-      <div>
-        <button class="icon-button theme-toggle" type="button" aria-label="Toggle theme">☾</button>
-        <button class="icon-button nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
-      </div>
     </div>
   </header>
 
-  <main class="page">
-    <div class="container">
-      <h1>CV</h1>
-      <p class="page-intro">My education, experience and skills.</p>
-      <!-- TODO: put your CV PDF in the files/ folder and update the link -->
-      <div class="button-row">
-        <a class="button" href="../files/cv-arne-persyn.pdf" download>Download CV (PDF)</a>
-      </div>
+  <main class="wrap">
+    <h1>CV</h1>
+    <!-- TODO: put your CV PDF in a files/ folder at the root of the site -->
+    <p>The short version is below. Prefer paper? <a href="../files/cv-arne-persyn.pdf" download>Download it as a PDF</a>.</p>
 
-      <h2>Experience</h2>
-      <ol class="timeline">
-        <li>
-          <p class="meta"><span class="placeholder">Month Year – Present</span></p>
+    <h2>Experience</h2>
+    <ol class="cv-list">
+      <li>
+        <span class="when"><span class="placeholder">2025 – now</span></span>
+        <div>
           <h3><span class="placeholder">Job title</span></h3>
-          <p class="muted"><span class="placeholder">Company · Location</span></p>
-          <p><span class="placeholder">What you did and what you achieved.</span></p>
-        </li>
-        <li>
-          <p class="meta"><span class="placeholder">Month Year – Month Year</span></p>
+          <p class="soft"><span class="placeholder">Company, City</span></p>
+          <p><span class="placeholder">What you did and what came out of it.</span></p>
+        </div>
+      </li>
+      <li>
+        <span class="when"><span class="placeholder">2024 – 2025</span></span>
+        <div>
           <h3><span class="placeholder">Job title</span></h3>
-          <p class="muted"><span class="placeholder">Company · Location</span></p>
-          <p><span class="placeholder">What you did and what you achieved.</span></p>
-        </li>
-      </ol>
+          <p class="soft"><span class="placeholder">Company, City</span></p>
+          <p><span class="placeholder">What you did and what came out of it.</span></p>
+        </div>
+      </li>
+    </ol>
 
-      <h2>Education</h2>
-      <ol class="timeline">
-        <li>
-          <p class="meta"><span class="placeholder">Year – Year</span></p>
+    <h2>Education</h2>
+    <ol class="cv-list">
+      <li>
+        <span class="when"><span class="placeholder">2024 – now</span></span>
+        <div>
           <h3><span class="placeholder">Degree / programme</span></h3>
-          <p class="muted"><span class="placeholder">School · Location</span></p>
-        </li>
-        <li>
-          <p class="meta"><span class="placeholder">Year – Year</span></p>
+          <p class="soft"><span class="placeholder">School, City</span></p>
+        </div>
+      </li>
+      <li>
+        <span class="when"><span class="placeholder">2018 – 2024</span></span>
+        <div>
           <h3><span class="placeholder">Secondary education</span></h3>
-          <p class="muted"><span class="placeholder">School · Location</span></p>
-        </li>
-      </ol>
+          <p class="soft"><span class="placeholder">School, City</span></p>
+        </div>
+      </li>
+    </ol>
 
-      <h2>Skills</h2>
-      <ul class="skill-list">
-        <li><span class="placeholder">Skill</span></li>
-        <li><span class="placeholder">Skill</span></li>
-        <li><span class="placeholder">Skill</span></li>
-        <li><span class="placeholder">Skill</span></li>
-      </ul>
+    <h2>Skills</h2>
+    <ul class="inline-list">
+      <li><span class="placeholder">Skill</span></li>
+      <li><span class="placeholder">Skill</span></li>
+      <li><span class="placeholder">Skill</span></li>
+      <li><span class="placeholder">Skill</span></li>
+    </ul>
 
-      <h2>Languages</h2>
-      <ul class="skill-list">
-        <li><span class="placeholder">Language · level</span></li>
-        <li><span class="placeholder">Language · level</span></li>
-      </ul>
+    <h2>Languages</h2>
+    <ul class="inline-list">
+      <li><span class="placeholder">Language (level)</span></li>
+      <li><span class="placeholder">Language (level)</span></li>
+    </ul>
 
-      <h2>Certifications</h2>
-      <ul>
-        <li><span class="placeholder">Certification name · issuer · year</span></li>
-      </ul>
-    </div>
+    <h2>Certifications</h2>
+    <ul class="inline-list">
+      <li><span class="placeholder">Certification, issuer, year</span></li>
+    </ul>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span class="year">2026</span> Arne Persyn</p>
-      <nav aria-label="Social">
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="wrap">
+      <span>© <span class="year">2026</span> Arne Persyn</span>
+      <span>
+        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="contact.html">say hi</a> ·
+        <button class="theme-toggle" type="button">lights off</button>
+      </span>
     </div>
   </footer>
 </body>

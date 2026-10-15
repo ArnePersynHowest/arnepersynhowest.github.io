@@ -5,79 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Projects by Arne Persyn.">
-  <title>Projects · Arne Persyn</title>
+  <title>Work · Arne Persyn</title>
   <link href="../css/style.css" rel="stylesheet">
   <script src="../js/main.js" defer></script>
 </head>
 
 <body data-page="projects">
   <header class="site-header">
-    <div class="container">
-      <a class="logo" href="../index.html">Arne Persyn</a>
+    <div class="wrap">
+      <a class="name" href="../index.html">Arne Persyn</a>
       <nav class="nav" aria-label="Main">
-        <a href="../index.html" data-page="home">Home</a>
-        <a href="about.html" data-page="about">About</a>
-        <a href="projects.html" data-page="projects">Projects</a>
-        <a href="blog.html" data-page="blog">Blog</a>
-        <a href="cv.html" data-page="cv">CV</a>
-        <a href="contact.html" data-page="contact">Contact</a>
+        <a href="about.html" data-page="about">about</a>
+        <a href="projects.html" data-page="projects">work</a>
+        <a href="blog.html" data-page="blog">writing</a>
+        <a href="cv.html" data-page="cv">cv</a>
+        <a href="contact.html" data-page="contact">contact</a>
       </nav>
-      <div>
-        <button class="icon-button theme-toggle" type="button" aria-label="Toggle theme">☾</button>
-        <button class="icon-button nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
-      </div>
     </div>
   </header>
 
-  <main class="page">
-    <div class="container">
-      <h1>Projects</h1>
-      <p class="page-intro">A selection of school and personal projects I've worked on.</p>
+  <main class="wrap">
+    <h1>Work</h1>
+    <p class="lede">Things I've built, for school and for fun.</p>
 
-      <!-- To add a project: copy one <li class="card"> block and fill it in -->
-      <ul class="card-list">
-        <li class="card">
-          <p class="meta"><span class="placeholder">Year · School / personal</span></p>
+    <!-- To add a project: copy one <li> block. Numbers are added automatically. -->
+    <ol class="work">
+      <li>
+        <div>
           <h3><span class="placeholder">Project name</span></h3>
-          <p><span class="placeholder">What it is, what problem it solves and what your role was.</span></p>
-          <ul class="tags">
-            <li class="tag">Tech 1</li>
-            <li class="tag">Tech 2</li>
-          </ul>
-          <div class="button-row">
-            <a class="button secondary" href="#">Source code</a>
-            <a class="button secondary" href="#">Live demo</a>
-          </div>
-        </li>
-
-        <li class="card">
-          <p class="meta"><span class="placeholder">Year · School / personal</span></p>
+          <p><span class="placeholder">What it is, why you made it and what your part was. Two or three sentences is plenty.</span></p>
+          <p class="built-with">Built with <span class="placeholder">tech, tech and tech</span> · <span class="placeholder">2026, school project</span></p>
+          <p class="links"><a href="#">source</a> · <a href="#">live</a></p>
+        </div>
+      </li>
+      <li>
+        <div>
           <h3><span class="placeholder">Project name</span></h3>
-          <p><span class="placeholder">What it is, what problem it solves and what your role was.</span></p>
-          <ul class="tags">
-            <li class="tag">Tech 1</li>
-          </ul>
-        </li>
-
-        <li class="card">
-          <p class="meta"><span class="placeholder">Year · School / personal</span></p>
+          <p><span class="placeholder">What it is, why you made it and what your part was.</span></p>
+          <p class="built-with">Built with <span class="placeholder">tech and tech</span> · <span class="placeholder">2025, personal</span></p>
+        </div>
+      </li>
+      <li>
+        <div>
           <h3><span class="placeholder">Project name</span></h3>
-          <p><span class="placeholder">What it is, what problem it solves and what your role was.</span></p>
-          <ul class="tags">
-            <li class="tag">Tech 1</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+          <p><span class="placeholder">What it is, why you made it and what your part was.</span></p>
+          <p class="built-with">Built with <span class="placeholder">tech</span> · <span class="placeholder">2025, school project</span></p>
+        </div>
+      </li>
+    </ol>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span class="year">2026</span> Arne Persyn</p>
-      <nav aria-label="Social">
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="wrap">
+      <span>© <span class="year">2026</span> Arne Persyn</span>
+      <span>
+        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="contact.html">say hi</a> ·
+        <button class="theme-toggle" type="button">lights off</button>
+      </span>
     </div>
   </footer>
 </body>
