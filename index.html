@@ -4,14 +4,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home page</title>
+  <meta name="description" content="Personal website and blog of Arne Persyn.">
+  <title>Arne Persyn</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/main.js" defer></script>
 </head>
 
-<body>
-  <h1>Home page</h1>
-  <nav>
-    <a href="./subpages/about.html">About</a>
-  </nav>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Arne Persyn</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="subpages/about.html" data-page="about">About</a>
+        <a href="subpages/projects.html" data-page="projects">Projects</a>
+        <a href="subpages/blog.html" data-page="blog">Blog</a>
+        <a href="subpages/cv.html" data-page="cv">CV</a>
+        <a href="subpages/contact.html" data-page="contact">Contact</a>
+      </nav>
+      <div>
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+        <button class="icon-button nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <!-- TODO: add your photo to images/ and change src below -->
+        <img class="hero-photo" src="images/profile-placeholder.svg" alt="Photo of Arne Persyn">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Arne Persyn</h1>
+        <p><span class="placeholder">Your headline, e.g. your study programme, school and what you're passionate about.</span></p>
+        <div class="button-row">
+          <a class="button" href="subpages/projects.html">View my projects</a>
+          <a class="button secondary" href="subpages/blog.html">Read the blog</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-heading">
+        <h2>Latest posts</h2>
+        <a href="subpages/blog.html">All posts →</a>
+      </div>
+      <ul class="card-list">
+        <li class="card">
+          <p class="meta"><time datetime="2026-10-15">15 October 2026</time></p>
+          <h3><a href="subpages/blog/welcome.html">Welcome to my blog</a></h3>
+          <p>Why I started this site and what I'll be writing about.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container page">
+      <div class="section-heading">
+        <h2>Featured projects</h2>
+        <a href="subpages/projects.html">All projects →</a>
+      </div>
+      <ul class="card-list">
+        <li class="card">
+          <h3><span class="placeholder">Project name</span></h3>
+          <p><span class="placeholder">One-sentence description of the project.</span></p>
+          <ul class="tags">
+            <li class="tag">Tech 1</li>
+            <li class="tag">Tech 2</li>
+          </ul>
+        </li>
+        <li class="card">
+          <h3><span class="placeholder">Project name</span></h3>
+          <p><span class="placeholder">One-sentence description of the project.</span></p>
+          <ul class="tags">
+            <li class="tag">Tech 1</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span class="year">2026</span> Arne Persyn</p>
+      <nav aria-label="Social">
+        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="subpages/contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  BLOG POST TEMPLATE
+  1. Copy this file to e.g. my-new-post.html (lowercase, dashes, no spaces)
+  2. Change the <title>, description, date, tags and content below
+  3. Add a card linking to it on ../blog.html (and optionally ../../index.html)
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Short summary of the post.">
+  <title>Post title · Arne Persyn</title>
+  <link href="../../css/style.css" rel="stylesheet">
+  <script src="../../js/main.js" defer></script>
+</head>
+
+<body data-page="blog">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="../../index.html">Arne Persyn</a>
+      <nav class="nav" aria-label="Main">
+        <a href="../../index.html" data-page="home">Home</a>
+        <a href="../about.html" data-page="about">About</a>
+        <a href="../projects.html" data-page="projects">Projects</a>
+        <a href="../blog.html" data-page="blog">Blog</a>
+        <a href="../cv.html" data-page="cv">CV</a>
+        <a href="../contact.html" data-page="contact">Contact</a>
+      </nav>
+      <div>
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+        <button class="icon-button nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="container">
+      <a class="back-link" href="../blog.html">← All posts</a>
+
+      <header class="post-header">
+        <p class="meta"><time datetime="2026-01-01">1 January 2026</time> · 3 min read</p>
+        <h1>Post title</h1>
+        <ul class="tags">
+          <li class="tag">tag</li>
+        </ul>
+      </header>
+
+      <div class="post-body">
+        <p>Intro paragraph: what is this post about?</p>
+
+        <h2>A section heading</h2>
+        <p>Your text here. You can use <a href="#">links</a>, <strong>bold</strong> and <code>inline code</code>.</p>
+
+        <!-- Images: put them in /images and reference them like this -->
+        <!-- <img src="../../images/my-image.jpg" alt="Describe the image"> -->
+
+        <blockquote>A quote or highlighted thought.</blockquote>
+
+        <pre><code>// a code block
+console.log("hello");</code></pre>
+
+        <h2>Wrapping up</h2>
+        <p>What did you learn, and what's next?</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span class="year">2026</span> Arne Persyn</p>
+      <nav aria-label="Social">
+        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>

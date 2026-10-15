@@ -4,15 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About page</title>
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="description" content="About Arne Persyn.">
+  <title>About · Arne Persyn</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="../js/main.js" defer></script>
 </head>
 
-<body>
-  <h1>About page</h1>
-  <nav>
-    <a href="./../index.html">Home</a>
-  </nav>
+<body data-page="about">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="../index.html">Arne Persyn</a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html" data-page="home">Home</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="projects.html" data-page="projects">Projects</a>
+        <a href="blog.html" data-page="blog">Blog</a>
+        <a href="cv.html" data-page="cv">CV</a>
+        <a href="contact.html" data-page="contact">Contact</a>
+      </nav>
+      <div>
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+        <button class="icon-button nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <h1>About me</h1>
+      <p class="page-intro"><span class="placeholder">A short one-line summary of who you are.</span></p>
+
+      <!-- TODO: paste the "About" section of your LinkedIn profile here -->
+      <p><span class="placeholder">Paragraph 1: who you are, what you study and where.</span></p>
+      <p><span class="placeholder">Paragraph 2: what you're interested in and what drives you.</span></p>
+      <p><span class="placeholder">Paragraph 3: what you're looking for (internship, job, collaborations, ...).</span></p>
+
+      <h2>What I work with</h2>
+      <ul class="skill-list">
+        <li><span class="placeholder">Skill</span></li>
+        <li><span class="placeholder">Skill</span></li>
+        <li><span class="placeholder">Skill</span></li>
+        <li><span class="placeholder">Skill</span></li>
+      </ul>
+
+      <h2>Outside of work</h2>
+      <p><span class="placeholder">Hobbies, sports, side interests: whatever makes you, you.</span></p>
+
+      <div class="button-row">
+        <a class="button" href="cv.html">See my CV</a>
+        <a class="button secondary" href="contact.html">Get in touch</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span class="year">2026</span> Arne Persyn</p>
+      <nav aria-label="Social">
+        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
