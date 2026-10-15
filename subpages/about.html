@@ -1,60 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="About Arne Persyn.">
   <title>About · Arne Persyn</title>
   <link href="../css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="../js/theme.js"></script>
   <script src="../js/main.js" defer></script>
 </head>
 
 <body data-page="about">
   <header class="site-header">
-    <div class="wrap">
-      <a class="name" href="../index.html">Arne Persyn</a>
-      <nav class="nav" aria-label="Main">
-        <a href="about.html" data-page="about">about</a>
-        <a href="projects.html" data-page="projects">work</a>
-        <a href="blog.html" data-page="blog">writing</a>
-        <a href="cv.html" data-page="cv">cv</a>
-        <a href="contact.html" data-page="contact">contact</a>
-      </nav>
+    <div class="shell">
+      <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="about.html" data-page="about">about</a>
+          <a href="projects.html" data-page="projects">projects</a>
+          <a href="blog.html" data-page="blog">blog</a>
+          <a href="cv.html" data-page="cv">cv</a>
+          <a href="contact.html" data-page="contact">contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <h1>About me</h1>
+  <main>
+    <header class="page-head">
+      <div class="shell grid">
+        <p class="label"><b>~/</b>about</p>
+        <h1>About me</h1>
+        <p class="page-intro"><span class="placeholder">A single sentence that sums you up.</span></p>
+      </div>
+    </header>
 
-    <!-- TODO: write this in your own voice; the LinkedIn "About" is a good starting point -->
-    <p class="lede"><span class="placeholder">A single sentence that sums you up.</span></p>
-    <p><span class="placeholder">Who you are, what you study and where.</span></p>
-    <p><span class="placeholder">What got you into this field, and what you enjoy most about it.</span></p>
-    <p><span class="placeholder">What you're looking for right now: an internship, a job, people to build things with, ...</span></p>
+    <section class="section">
+      <div class="shell grid about">
+        <figure class="about-photo">
+          <!-- TODO: add your photo to images/ and change src below -->
+          <img class="portrait" src="../images/profile-placeholder.svg" alt="Portrait of Arne Persyn">
+          <figcaption class="label">// that's me</figcaption>
+        </figure>
+        <div class="about-text">
+          <!-- TODO: write this in your own voice; the LinkedIn "About" is a good starting point -->
+          <p class="lead"><span class="placeholder">What draws you to backend development, in one or two sentences.</span></p>
+          <p><span class="placeholder">Who you are, what you study and where.</span></p>
+          <p><span class="placeholder">How you got into programming, and what you enjoy most about it.</span></p>
+          <p><span class="placeholder">What you're looking for right now: an internship, a job, people to build things with, ...</span></p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Things I work with</h2>
-    <ul class="inline-list">
-      <li><span class="placeholder">Skill</span></li>
-      <li><span class="placeholder">Skill</span></li>
-      <li><span class="placeholder">Skill</span></li>
-      <li><span class="placeholder">Skill</span></li>
-    </ul>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 01</p>
+            <h2>Right now</h2>
+          </div>
+        </div>
+        <ul class="rows">
+          <li><div class="row"><span class="label">learning</span><span class="row-title"><span class="placeholder">Something you're learning</span></span></div></li>
+          <li><div class="row"><span class="label">building</span><span class="row-title"><span class="placeholder">Something you're building</span></span></div></li>
+          <li><div class="row"><span class="label">reading</span><span class="row-title"><span class="placeholder">A book, course or blog you're into</span></span></div></li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>When I'm not studying</h2>
-    <p><span class="placeholder">Hobbies, sports, side interests: whatever makes you, you.</span></p>
-
-    <p class="more">For the formal version, have a look at <a href="cv.html">my CV</a>. Or just <a href="contact.html">get in touch</a>.</p>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 02</p>
+            <h2>Away from the keyboard</h2>
+          </div>
+        </div>
+        <p class="page-intro" style="max-width: 40em"><span class="placeholder">Hobbies, sports, side interests: whatever makes you, you.</span></p>
+      </div>
+    </section>
   </main>
 
+  <section class="cta">
+    <div class="shell">
+      <p class="label"><b>$</b> ./contact.sh</p>
+      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
+      <div class="actions">
+        <a class="btn" href="contact.html">Get in touch →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span class="year">2026</span> Arne Persyn</span>
-      <span>
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="contact.html">say hi</a> ·
-        <button class="theme-toggle" type="button">lights off</button>
-      </span>
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="contact.html">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
+      </div>
     </div>
   </footer>
 </body>

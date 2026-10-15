@@ -1,68 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Projects by Arne Persyn.">
-  <title>Work · Arne Persyn</title>
+  <title>Projects · Arne Persyn</title>
   <link href="../css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="../js/theme.js"></script>
   <script src="../js/main.js" defer></script>
 </head>
 
 <body data-page="projects">
   <header class="site-header">
-    <div class="wrap">
-      <a class="name" href="../index.html">Arne Persyn</a>
-      <nav class="nav" aria-label="Main">
-        <a href="about.html" data-page="about">about</a>
-        <a href="projects.html" data-page="projects">work</a>
-        <a href="blog.html" data-page="blog">writing</a>
-        <a href="cv.html" data-page="cv">cv</a>
-        <a href="contact.html" data-page="contact">contact</a>
-      </nav>
+    <div class="shell">
+      <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="about.html" data-page="about">about</a>
+          <a href="projects.html" data-page="projects">projects</a>
+          <a href="blog.html" data-page="blog">blog</a>
+          <a href="cv.html" data-page="cv">cv</a>
+          <a href="contact.html" data-page="contact">contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <h1>Work</h1>
-    <p class="lede">Things I've built, for school and for fun.</p>
+  <main>
+    <header class="page-head">
+      <div class="shell grid">
+        <p class="label"><b>~/</b>projects</p>
+        <h1>Projects</h1>
+        <p class="page-intro">Things I've built, for school and on my own.</p>
+      </div>
+    </header>
+    <!-- To add a project: copy one <article> block and change the number -->
 
-    <!-- To add a project: copy one <li> block. Numbers are added automatically. -->
-    <ol class="work">
-      <li>
-        <div>
-          <h3><span class="placeholder">Project name</span></h3>
-          <p><span class="placeholder">What it is, why you made it and what your part was. Two or three sentences is plenty.</span></p>
-          <p class="built-with">Built with <span class="placeholder">tech, tech and tech</span> · <span class="placeholder">2026, school project</span></p>
-          <p class="links"><a href="#">source</a> · <a href="#">live</a></p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3><span class="placeholder">Project name</span></h3>
-          <p><span class="placeholder">What it is, why you made it and what your part was.</span></p>
-          <p class="built-with">Built with <span class="placeholder">tech and tech</span> · <span class="placeholder">2025, personal</span></p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3><span class="placeholder">Project name</span></h3>
-          <p><span class="placeholder">What it is, why you made it and what your part was.</span></p>
-          <p class="built-with">Built with <span class="placeholder">tech</span> · <span class="placeholder">2025, school project</span></p>
-        </div>
-      </li>
-    </ol>
+    <article class="project shell grid">
+      <div class="project-info">
+        <p class="label"><b>//</b> 01 · <span class="placeholder">2026</span></p>
+        <h2><span class="placeholder">Project name</span></h2>
+        <p><span class="placeholder">What it is, what problem it solves and what your part was. Two or three sentences is plenty.</span></p>
+        <dl class="facts">
+          <div><dt>role</dt><dd><span class="placeholder">e.g. backend developer</span></dd></div>
+          <div><dt>stack</dt><dd><span class="placeholder">language, framework, database</span></dd></div>
+          <div><dt>context</dt><dd><span class="placeholder">school project / personal</span></dd></div>
+        </dl>
+          <p class="links">
+            <a class="arrow-link" href="#">source code</a>
+            <a class="arrow-link" href="#">live / docs</a>
+          </p>
+      </div>
+      <div class="project-media">
+        <!-- Replace with <img class="frame" src="../images/your-image.png" alt="...">
+             A screenshot, an architecture diagram or an API example all work well. -->
+        <div class="frame"><span class="label">screenshot · architecture diagram · API example</span></div>
+      </div>
+    </article>
+
+    <article class="project shell grid">
+      <div class="project-info">
+        <p class="label"><b>//</b> 02 · <span class="placeholder">2025</span></p>
+        <h2><span class="placeholder">Project name</span></h2>
+        <p><span class="placeholder">What it is, what problem it solves and what your part was. Two or three sentences is plenty.</span></p>
+        <dl class="facts">
+          <div><dt>role</dt><dd><span class="placeholder">e.g. backend developer</span></dd></div>
+          <div><dt>stack</dt><dd><span class="placeholder">language, framework, database</span></dd></div>
+          <div><dt>context</dt><dd><span class="placeholder">school project / personal</span></dd></div>
+        </dl>
+      </div>
+      <div class="project-media">
+        <!-- Replace with <img class="frame" src="../images/your-image.png" alt="...">
+             A screenshot, an architecture diagram or an API example all work well. -->
+        <div class="frame"><span class="label">screenshot · architecture diagram · API example</span></div>
+      </div>
+    </article>
+
+    <article class="project shell grid">
+      <div class="project-info">
+        <p class="label"><b>//</b> 03 · <span class="placeholder">2025</span></p>
+        <h2><span class="placeholder">Project name</span></h2>
+        <p><span class="placeholder">What it is, what problem it solves and what your part was. Two or three sentences is plenty.</span></p>
+        <dl class="facts">
+          <div><dt>role</dt><dd><span class="placeholder">e.g. backend developer</span></dd></div>
+          <div><dt>stack</dt><dd><span class="placeholder">language, framework, database</span></dd></div>
+          <div><dt>context</dt><dd><span class="placeholder">school project / personal</span></dd></div>
+        </dl>
+      </div>
+      <div class="project-media">
+        <!-- Replace with <img class="frame" src="../images/your-image.png" alt="...">
+             A screenshot, an architecture diagram or an API example all work well. -->
+        <div class="frame"><span class="label">screenshot · architecture diagram · API example</span></div>
+      </div>
+    </article>
   </main>
 
+  <section class="cta">
+    <div class="shell">
+      <p class="label"><b>$</b> ./contact.sh</p>
+      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
+      <div class="actions">
+        <a class="btn" href="contact.html">Get in touch →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span class="year">2026</span> Arne Persyn</span>
-      <span>
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="contact.html">say hi</a> ·
-        <button class="theme-toggle" type="button">lights off</button>
-      </span>
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="contact.html">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
+      </div>
     </div>
   </footer>
 </body>

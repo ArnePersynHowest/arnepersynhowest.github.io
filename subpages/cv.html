@@ -1,100 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="CV of Arne Persyn.">
   <title>CV · Arne Persyn</title>
   <link href="../css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="../js/theme.js"></script>
   <script src="../js/main.js" defer></script>
 </head>
 
 <body data-page="cv">
   <header class="site-header">
-    <div class="wrap">
-      <a class="name" href="../index.html">Arne Persyn</a>
-      <nav class="nav" aria-label="Main">
-        <a href="about.html" data-page="about">about</a>
-        <a href="projects.html" data-page="projects">work</a>
-        <a href="blog.html" data-page="blog">writing</a>
-        <a href="cv.html" data-page="cv">cv</a>
-        <a href="contact.html" data-page="contact">contact</a>
-      </nav>
+    <div class="shell">
+      <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="about.html" data-page="about">about</a>
+          <a href="projects.html" data-page="projects">projects</a>
+          <a href="blog.html" data-page="blog">blog</a>
+          <a href="cv.html" data-page="cv">cv</a>
+          <a href="contact.html" data-page="contact">contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <h1>CV</h1>
-    <!-- TODO: put your CV PDF in a files/ folder at the root of the site -->
-    <p>The short version is below. Prefer paper? <a href="../files/cv-arne-persyn.pdf" download>Download it as a PDF</a>.</p>
-
-    <h2>Experience</h2>
-    <ol class="cv-list">
-      <li>
-        <span class="when"><span class="placeholder">2025 – now</span></span>
-        <div>
-          <h3><span class="placeholder">Job title</span></h3>
-          <p class="soft"><span class="placeholder">Company, City</span></p>
-          <p><span class="placeholder">What you did and what came out of it.</span></p>
+  <main>
+    <header class="page-head">
+      <div class="shell grid">
+        <p class="label"><b>~/</b>cv</p>
+        <h1>Curriculum vitae</h1>
+        <div class="page-intro">
+          <p>The short version. Prefer a document?</p>
+          <!-- TODO: put your CV PDF in a files/ folder at the root of the site -->
+          <a class="btn" href="../files/cv-arne-persyn.pdf" download>Download PDF ↓</a>
         </div>
-      </li>
-      <li>
-        <span class="when"><span class="placeholder">2024 – 2025</span></span>
-        <div>
-          <h3><span class="placeholder">Job title</span></h3>
-          <p class="soft"><span class="placeholder">Company, City</span></p>
-          <p><span class="placeholder">What you did and what came out of it.</span></p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 01</p>
+            <h2>Experience</h2>
+          </div>
         </div>
-      </li>
-    </ol>
-
-    <h2>Education</h2>
-    <ol class="cv-list">
-      <li>
-        <span class="when"><span class="placeholder">2024 – now</span></span>
         <div>
-          <h3><span class="placeholder">Degree / programme</span></h3>
-          <p class="soft"><span class="placeholder">School, City</span></p>
+          <div class="cv-row">
+            <p class="label"><span class="placeholder">2025 — now</span></p>
+            <div>
+              <h3><span class="placeholder">Job title</span></h3>
+              <p class="soft"><span class="placeholder">Company, City</span></p>
+              <p><span class="placeholder">What you did and what came out of it.</span></p>
+            </div>
+          </div>
+          <div class="cv-row">
+            <p class="label"><span class="placeholder">2024 — 2025</span></p>
+            <div>
+              <h3><span class="placeholder">Job title</span></h3>
+              <p class="soft"><span class="placeholder">Company, City</span></p>
+              <p><span class="placeholder">What you did and what came out of it.</span></p>
+            </div>
+          </div>
         </div>
-      </li>
-      <li>
-        <span class="when"><span class="placeholder">2018 – 2024</span></span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 02</p>
+            <h2>Education</h2>
+          </div>
+        </div>
         <div>
-          <h3><span class="placeholder">Secondary education</span></h3>
-          <p class="soft"><span class="placeholder">School, City</span></p>
+          <div class="cv-row">
+            <p class="label"><span class="placeholder">2024 — now</span></p>
+            <div>
+              <h3><span class="placeholder">Degree / programme</span></h3>
+              <p class="soft"><span class="placeholder">School, City</span></p>
+            </div>
+          </div>
+          <div class="cv-row">
+            <p class="label"><span class="placeholder">2018 — 2024</span></p>
+            <div>
+              <h3><span class="placeholder">Secondary education</span></h3>
+              <p class="soft"><span class="placeholder">School, City</span></p>
+            </div>
+          </div>
         </div>
-      </li>
-    </ol>
+      </div>
+    </section>
 
-    <h2>Skills</h2>
-    <ul class="inline-list">
-      <li><span class="placeholder">Skill</span></li>
-      <li><span class="placeholder">Skill</span></li>
-      <li><span class="placeholder">Skill</span></li>
-      <li><span class="placeholder">Skill</span></li>
-    </ul>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 03</p>
+            <h2>Stack</h2>
+          </div>
+        </div>
+        <div class="tiles">
+          <div class="tile">
+            <p class="label">languages</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+          <div class="tile">
+            <p class="label">frameworks</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+          <div class="tile">
+            <p class="label">databases</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+          <div class="tile">
+            <p class="label">tools & infra</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Languages</h2>
-    <ul class="inline-list">
-      <li><span class="placeholder">Language (level)</span></li>
-      <li><span class="placeholder">Language (level)</span></li>
-    </ul>
-
-    <h2>Certifications</h2>
-    <ul class="inline-list">
-      <li><span class="placeholder">Certification, issuer, year</span></li>
-    </ul>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 04</p>
+            <h2>Languages &amp; certifications</h2>
+          </div>
+        </div>
+        <ul class="rows">
+          <li><div class="row"><span class="label">language</span><span class="row-title"><span class="placeholder">Language</span></span><span class="label"><span class="placeholder">level</span></span></div></li>
+          <li><div class="row"><span class="label">language</span><span class="row-title"><span class="placeholder">Language</span></span><span class="label"><span class="placeholder">level</span></span></div></li>
+          <li><div class="row"><span class="label"><span class="placeholder">year</span></span><span class="row-title"><span class="placeholder">Certification</span></span><span class="label"><span class="placeholder">issuer</span></span></div></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
+  <section class="cta">
+    <div class="shell">
+      <p class="label"><b>$</b> ./contact.sh</p>
+      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
+      <div class="actions">
+        <a class="btn" href="contact.html">Get in touch →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span class="year">2026</span> Arne Persyn</span>
-      <span>
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="contact.html">say hi</a> ·
-        <button class="theme-toggle" type="button">lights off</button>
-      </span>
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="contact.html">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
+      </div>
     </div>
   </footer>
 </body>

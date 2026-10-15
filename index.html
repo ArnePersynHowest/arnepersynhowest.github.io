@@ -1,79 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website and blog of Arne Persyn.">
-  <title>Arne Persyn</title>
+  <meta name="description" content="Arne Persyn, student developer focused on the backend.">
+  <title>Arne Persyn · Student developer</title>
   <link href="css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="js/theme.js"></script>
   <script src="js/main.js" defer></script>
 </head>
 
 <body data-page="home">
   <header class="site-header">
-    <div class="wrap">
-      <a class="name" href="index.html">Arne Persyn</a>
-      <nav class="nav" aria-label="Main">
-        <a href="subpages/about.html" data-page="about">about</a>
-        <a href="subpages/projects.html" data-page="projects">work</a>
-        <a href="subpages/blog.html" data-page="blog">writing</a>
-        <a href="subpages/cv.html" data-page="cv">cv</a>
-        <a href="subpages/contact.html" data-page="contact">contact</a>
-      </nav>
+    <div class="shell">
+      <a class="logo" href="index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="subpages/about.html" data-page="about">about</a>
+          <a href="subpages/projects.html" data-page="projects">projects</a>
+          <a href="subpages/blog.html" data-page="blog">blog</a>
+          <a href="subpages/cv.html" data-page="cv">cv</a>
+          <a href="subpages/contact.html" data-page="contact">contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="intro">
-      <div>
-        <p class="lede">I'm Arne. <span class="placeholder">One or two sentences in your own words: what you study, what you like building, what you care about.</span></p>
-        <p>This is my corner of the internet. I write about <a href="subpages/blog.html">things I've done and learned</a>, show <a href="subpages/projects.html">some of my work</a>, and you can find <a href="subpages/about.html">a bit more about me</a> here too.</p>
+  <main>
+    <section class="hero">
+      <div class="shell grid">
+        <div class="hero-text">
+          <span class="status"><span class="placeholder">Status, e.g. open to an internship</span></span>
+          <h1>Student developer, building the <span class="accent">backend</span>.</h1>
+          <p class="intro">I'm Arne Persyn. <span class="placeholder">One or two sentences: what you study, where, and what you like to build.</span></p>
+          <div class="actions">
+            <a class="btn" href="subpages/projects.html">View projects →</a>
+            <a class="btn ghost" href="subpages/blog.html">Read the blog</a>
+          </div>
+        </div>
+
+        <!-- Fill in the yellow parts; keep the quotes around text values -->
+        <figure class="code hero-code">
+          <figcaption class="code-bar">
+            <span><span class="method">GET</span>/api/me</span>
+            <span class="ok">200 OK</span>
+          </figcaption>
+<pre><code><span class="t-pun">{</span>
+  <span class="t-key">"name"</span><span class="t-pun">:</span> <span class="t-str">"Arne Persyn"</span><span class="t-pun">,</span>
+  <span class="t-key">"role"</span><span class="t-pun">:</span> <span class="t-str">"student developer"</span><span class="t-pun">,</span>
+  <span class="t-key">"focus"</span><span class="t-pun">:</span> <span class="t-str">"backend"</span><span class="t-pun">,</span>
+  <span class="t-key">"school"</span><span class="t-pun">:</span> <span class="t-str">"<span class="placeholder">school</span>"</span><span class="t-pun">,</span>
+  <span class="t-key">"stack"</span><span class="t-pun">: [</span>
+    <span class="t-str">"<span class="placeholder">language</span>"</span><span class="t-pun">,</span>
+    <span class="t-str">"<span class="placeholder">framework</span>"</span><span class="t-pun">,</span>
+    <span class="t-str">"<span class="placeholder">database</span>"</span>
+  <span class="t-pun">],</span>
+  <span class="t-key">"location"</span><span class="t-pun">:</span> <span class="t-str">"<span class="placeholder">city</span>"</span><span class="t-pun">,</span>
+  <span class="t-key">"open_to_work"</span><span class="t-pun">:</span> <span class="t-kw"><span class="placeholder">true</span></span>
+<span class="t-pun">}</span></code></pre>
+        </figure>
       </div>
-      <figure>
-        <!-- TODO: add your photo to images/ and change src below -->
-        <img src="images/profile-placeholder.svg" alt="Photo of Arne Persyn">
-        <figcaption><span class="note">↑ that's me!</span></figcaption>
-      </figure>
     </section>
 
-    <h2>Recent writing</h2>
-    <ul class="entries">
-      <li>
-        <time class="when" datetime="2026-10-15">Oct 2026</time>
-        <div><a href="subpages/blog/welcome.html">Welcome to my blog</a></div>
-      </li>
-    </ul>
-    <p class="more"><a href="subpages/blog.html">Everything I've written →</a></p>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 01</p>
+            <h2>Selected projects</h2>
+          </div>
+          <a class="arrow-link" href="subpages/projects.html">all projects</a>
+        </div>
+        <div class="tiles">
+          <a class="tile" href="subpages/projects.html">
+            <div class="tile-top">
+              <span class="label">01 / <span class="placeholder">2026</span></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3><span class="placeholder">Project name</span></h3>
+            <p><span class="placeholder">One or two lines on what it does and what you built.</span></p>
+            <ul class="tags tile-foot">
+              <li><span class="placeholder">tech</span></li>
+              <li><span class="placeholder">tech</span></li>
+              <li><span class="placeholder">tech</span></li>
+            </ul>
+          </a>
+          <a class="tile" href="subpages/projects.html">
+            <div class="tile-top">
+              <span class="label">02 / <span class="placeholder">2025</span></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3><span class="placeholder">Project name</span></h3>
+            <p><span class="placeholder">One or two lines on what it does and what you built.</span></p>
+            <ul class="tags tile-foot">
+              <li><span class="placeholder">tech</span></li>
+              <li><span class="placeholder">tech</span></li>
+              <li><span class="placeholder">tech</span></li>
+            </ul>
+          </a>
+          <a class="tile" href="subpages/projects.html">
+            <div class="tile-top">
+              <span class="label">03 / <span class="placeholder">2025</span></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3><span class="placeholder">Project name</span></h3>
+            <p><span class="placeholder">One or two lines on what it does and what you built.</span></p>
+            <ul class="tags tile-foot">
+              <li><span class="placeholder">tech</span></li>
+              <li><span class="placeholder">tech</span></li>
+              <li><span class="placeholder">tech</span></li>
+            </ul>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Selected work</h2>
-    <ul class="entries">
-      <li>
-        <span class="when"><span class="placeholder">2026</span></span>
-        <div>
-          <a href="subpages/projects.html"><span class="placeholder">Project name</span></a>
-          <p><span class="placeholder">One line on what it is.</span></p>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 02</p>
+            <h2>Stack</h2>
+          </div>
+          <a class="arrow-link" href="subpages/cv.html">full cv</a>
         </div>
-      </li>
-      <li>
-        <span class="when"><span class="placeholder">2025</span></span>
-        <div>
-          <a href="subpages/projects.html"><span class="placeholder">Project name</span></a>
-          <p><span class="placeholder">One line on what it is.</span></p>
+        <div class="tiles">
+          <div class="tile">
+            <p class="label">languages</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+          <div class="tile">
+            <p class="label">frameworks</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+          <div class="tile">
+            <p class="label">databases</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
+          <div class="tile">
+            <p class="label">tools & infra</p>
+            <ul class="stack-list">
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+              <li><span class="placeholder">item</span></li>
+            </ul>
+          </div>
         </div>
-      </li>
-    </ul>
-    <p class="more"><a href="subpages/projects.html">More work →</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label"><b>//</b> 03</p>
+            <h2>Latest from the blog</h2>
+          </div>
+          <a class="arrow-link" href="subpages/blog.html">all posts</a>
+        </div>
+        <ul class="rows">
+          <li>
+            <a class="row" href="subpages/blog/welcome.html">
+              <time class="label" datetime="2026-10-15">2026-10-15</time>
+              <span class="row-title">Welcome to my blog</span>
+              <span class="label">#personal</span>
+              <span class="row-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
+  <section class="cta">
+    <div class="shell">
+      <p class="label"><b>$</b> ./contact.sh</p>
+      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
+      <div class="actions">
+        <a class="btn" href="subpages/contact.html">Get in touch →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span class="year">2026</span> Arne Persyn</span>
-      <span>
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="subpages/contact.html">say hi</a> ·
-        <button class="theme-toggle" type="button">lights off</button>
-      </span>
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="subpages/about.html">About</a></li>
+          <li><a href="subpages/projects.html">Projects</a></li>
+          <li><a href="subpages/blog.html">Blog</a></li>
+          <li><a href="subpages/cv.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="subpages/contact.html">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
+      </div>
     </div>
   </footer>
 </body>

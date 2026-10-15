@@ -3,75 +3,130 @@
 <!--
   BLOG POST TEMPLATE
   1. Copy this file to e.g. my-new-post.html (lowercase, dashes, no spaces)
-  2. Change the <title>, description, date and content below
-  3. Add it to the list on ../blog.html and to "Recent writing" on ../../index.html
+  2. Change the <title>, description, slug, title, date, tag and content
+  3. Add it to the list on ../blog.html and to "Latest from the blog" on ../../index.html
 -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Short summary of the post.">
   <title>Post title · Arne Persyn</title>
   <link href="../../css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="../../js/theme.js"></script>
   <script src="../../js/main.js" defer></script>
 </head>
 
 <body data-page="blog">
   <header class="site-header">
-    <div class="wrap">
-      <a class="name" href="../../index.html">Arne Persyn</a>
-      <nav class="nav" aria-label="Main">
-        <a href="../about.html" data-page="about">about</a>
-        <a href="../projects.html" data-page="projects">work</a>
-        <a href="../blog.html" data-page="blog">writing</a>
-        <a href="../cv.html" data-page="cv">cv</a>
-        <a href="../contact.html" data-page="contact">contact</a>
-      </nav>
+    <div class="shell">
+      <a class="logo" href="../../index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="../about.html" data-page="about">about</a>
+          <a href="../projects.html" data-page="projects">projects</a>
+          <a href="../blog.html" data-page="blog">blog</a>
+          <a href="../cv.html" data-page="cv">cv</a>
+          <a href="../contact.html" data-page="contact">contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <article class="post">
-      <p class="post-meta"><time datetime="2026-01-01">1 January 2026</time> · school</p>
-      <h1>Post title</h1>
+  <main>
+    <header class="page-head post-head">
+      <div class="shell grid">
+        <p class="label"><a href="../blog.html"><b>~/</b>blog</a>/post-title</p>
+        <h1>Post title</h1>
+        <div class="post-meta label">
+          <time datetime="2026-01-01">2026-01-01</time>
+          <span>3 min read</span>
+          <span>#tech</span>
+        </div>
+      </div>
+    </header>
 
-      <div class="post-body">
-        <p>The first paragraph gets a big first letter automatically. Start with what this post is about.</p>
+    <div class="post-layout shell grid">
+      <aside class="post-aside">
+        <a class="arrow-link" href="../blog.html">all posts</a>
+      </aside>
+
+      <article class="post-body">
+        <p>The first paragraph is a bit larger: use it as the intro. What is this post about?</p>
 
         <h2>A section heading</h2>
-        <p>Your text here. You can use <a href="#">links</a>, <strong>bold</strong>, <em>italics</em>, <mark>highlighter</mark> and <code>inline code</code>.</p>
+        <p>Your text here. You can use <a href="#">links</a>, <strong>bold</strong>, <em>italics</em>, <mark>highlights</mark> and <code>inline code</code>.</p>
 
-        <!-- Photo with a caption: put the image in /images -->
+        <!-- Code block: change the file name and language in the bar -->
+        <figure class="code">
+          <figcaption class="code-bar"><span>terminal</span><span>bash</span></figcaption>
+<pre><code><span class="t-com"># call the API</span>
+curl -s http://localhost:8080/api/health
+<span class="t-pun">{</span><span class="t-key">"status"</span><span class="t-pun">:</span> <span class="t-str">"ok"</span><span class="t-pun">}</span></code></pre>
+        </figure>
+
+        <blockquote><p>A note, tip or key takeaway you want to stand out.</p></blockquote>
+
+        <!-- Image with a caption: put the image in /images -->
         <!--
         <figure>
-          <img src="../../images/my-photo.jpg" alt="Describe the photo">
-          <figcaption>What's in the photo.</figcaption>
+          <img src="../../images/my-image.png" alt="Describe the image">
+          <figcaption class="label">// what's in the image</figcaption>
         </figure>
         -->
 
-        <blockquote>A quote or a thought you want to stand out.</blockquote>
+        <h2>What I learned</h2>
+        <p>Wrap up: what went well, what you'd do differently, what's next?</p>
 
-        <p>A handwritten aside, if you feel like it: <span class="note">this took me 3 tries</span></p>
-
-        <pre><code>// a code block
-console.log("hello");</code></pre>
-
-        <h2>Looking back</h2>
-        <p>What did you learn, and what's next?</p>
-      </div>
-
-      <p class="post-end">Thanks for reading. <a href="../blog.html">More writing</a> · <a href="../contact.html">say hi</a></p>
-    </article>
+        <div class="post-end">
+          <a class="arrow-link" href="../blog.html">more posts</a>
+          <a class="arrow-link" href="../contact.html">get in touch</a>
+        </div>
+      </article>
+    </div>
   </main>
 
+  <section class="cta">
+    <div class="shell">
+      <p class="label"><b>$</b> ./contact.sh</p>
+      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
+      <div class="actions">
+        <a class="btn" href="../contact.html">Get in touch →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span class="year">2026</span> Arne Persyn</span>
-      <span>
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="../contact.html">say hi</a> ·
-        <button class="theme-toggle" type="button">lights off</button>
-      </span>
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="../../index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../cv.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="../contact.html">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
+      </div>
     </div>
   </footer>
 </body>

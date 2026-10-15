@@ -1,43 +1,5 @@
 // Small enhancements only — the site works fine without JavaScript.
-
-// ---------- Light / dark theme toggle (text link in the footer) ----------
-const themeToggle = document.querySelector(".theme-toggle");
-
-function getStoredTheme() {
-  try {
-    return localStorage.getItem("theme");
-  } catch {
-    return null;
-  }
-}
-
-function applyTheme(theme) {
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-  const isDark =
-    document.documentElement.getAttribute("data-theme") === "dark" ||
-    (!document.documentElement.hasAttribute("data-theme") &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches);
-  if (themeToggle) {
-    themeToggle.textContent = isDark ? "lights on" : "lights off";
-  }
-  return isDark;
-}
-
-let isDark = applyTheme(getStoredTheme());
-
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const next = isDark ? "light" : "dark";
-    try {
-      localStorage.setItem("theme", next);
-    } catch {
-      // Storage unavailable (private mode): theme just won't be remembered
-    }
-    isDark = applyTheme(next);
-  });
-}
+// (The light/dark theme lives in theme.js.)
 
 // ---------- Highlight current page in the nav ----------
 const currentPage = document.body.dataset.page;
@@ -70,3 +32,24 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// ---------- Gentle fade-in while scrolling ----------
+// Elements are only hidden once JS has marked them, so nothing disappears without JS.
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px" }
+  );
+
+  document.querySelectorAll(".section > .shell, .project, .cta .shell").forEach((el) => {
+    el.dataset.reveal = "";
+    revealObserver.observe(el);
+  });
+}

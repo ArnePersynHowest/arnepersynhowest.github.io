@@ -1,67 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Blog posts by Arne Persyn.">
-  <title>Writing · Arne Persyn</title>
+  <title>Blog · Arne Persyn</title>
   <link href="../css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="../js/theme.js"></script>
   <script src="../js/main.js" defer></script>
 </head>
 
 <body data-page="blog">
   <header class="site-header">
-    <div class="wrap">
-      <a class="name" href="../index.html">Arne Persyn</a>
-      <nav class="nav" aria-label="Main">
-        <a href="about.html" data-page="about">about</a>
-        <a href="projects.html" data-page="projects">work</a>
-        <a href="blog.html" data-page="blog">writing</a>
-        <a href="cv.html" data-page="cv">cv</a>
-        <a href="contact.html" data-page="contact">contact</a>
-      </nav>
+    <div class="shell">
+      <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="about.html" data-page="about">about</a>
+          <a href="projects.html" data-page="projects">projects</a>
+          <a href="blog.html" data-page="blog">blog</a>
+          <a href="cv.html" data-page="cv">cv</a>
+          <a href="contact.html" data-page="contact">contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <h1>Writing</h1>
-    <p class="lede">Notes on things I've built, learned and done.</p>
+  <main>
+    <header class="page-head">
+      <div class="shell grid">
+        <p class="label"><b>~/</b>blog</p>
+        <h1>Blog</h1>
+        <p class="page-intro">Write-ups of things I've built, broken and fixed.</p>
+      </div>
+    </header>
 
-    <!-- Filter: data-filter must match a word in a post's data-tags -->
-    <p class="filter">
-      Show:
-      <button class="active" type="button" data-filter="all">everything</button> ·
-      <button type="button" data-filter="personal">personal</button> ·
-      <button type="button" data-filter="school">school</button> ·
-      <button type="button" data-filter="tech">tech</button>
-    </p>
-
-    <!--
-      To add a post:
-      1. Copy blog/_template.html to blog/your-post-name.html and write it
-      2. Add an <li> below (newest first) with the right data-tags
-      3. Add it to "Recent writing" on index.html too
-    -->
-    <ul class="entries">
-      <li data-tags="personal">
-        <time class="when" datetime="2026-10-15">15 Oct 2026</time>
-        <div>
-          <a href="blog/welcome.html">Welcome to my blog</a>
-          <p>Why I started this site and what I'll be writing about.</p>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <!-- data-filter must match a word in a post's data-tags -->
+          <div class="filter">
+            <button class="active" type="button" data-filter="all">all</button>
+            <button type="button" data-filter="personal">#personal</button>
+            <button type="button" data-filter="school">#school</button>
+            <button type="button" data-filter="tech">#tech</button>
+          </div>
         </div>
-      </li>
-    </ul>
+        <!--
+          To add a post:
+          1. Copy blog/_template.html to blog/your-post-name.html and write it
+          2. Copy an <li> below (newest first) and set its data-tags
+          3. Add it to "Latest from the blog" on index.html too
+        -->
+        <ul class="rows">
+          <li data-tags="personal">
+            <a class="row" href="blog/welcome.html">
+              <time class="label" datetime="2026-10-15">2026-10-15</time>
+              <span class="row-title">Welcome to my blog<small>Why I started this site and what I'll be writing about.</small></span>
+              <span class="label">#personal</span>
+              <span class="row-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
+  <section class="cta">
+    <div class="shell">
+      <p class="label"><b>$</b> ./contact.sh</p>
+      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
+      <div class="actions">
+        <a class="btn" href="contact.html">Get in touch →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span class="year">2026</span> Arne Persyn</span>
-      <span>
-        <a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="contact.html">say hi</a> ·
-        <button class="theme-toggle" type="button">lights off</button>
-      </span>
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="../index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="contact.html">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
+      </div>
     </div>
   </footer>
 </body>
