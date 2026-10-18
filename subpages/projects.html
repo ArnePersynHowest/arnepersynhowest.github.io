@@ -42,35 +42,13 @@
 
     <article class="project shell grid">
       <div class="project-info">
-        <p class="label"><b>//</b> 01 · <span class="placeholder">2026</span></p>
-        <h2><span class="placeholder">Project name</span></h2>
-        <p><span class="placeholder">What it is, what problem it solves and what your part was. Two or three sentences is plenty.</span></p>
+        <p class="label"><b>//</b> 01 · 2026</p>
+        <h2>Howestprime</h2>
+        <p>A cinema ticketing platform built as two .NET microservices, movies and ticketing, split along domain-driven bounded contexts. They only talk through a RabbitMQ topic exchange (contracts in AsyncAPI), so booking and payment run fully asynchronously. The whole Azure environment is defined in Terraform, and GitHub Actions tests and deploys every merge to main.</p>
         <dl class="facts">
-          <div><dt>role</dt><dd><span class="placeholder">e.g. backend developer</span></dd></div>
-          <div><dt>stack</dt><dd><span class="placeholder">language, framework, database</span></dd></div>
-          <div><dt>context</dt><dd><span class="placeholder">school project / personal</span></dd></div>
-        </dl>
-          <p class="links">
-            <a class="arrow-link" href="#">source code</a>
-            <a class="arrow-link" href="#">live / docs</a>
-          </p>
-      </div>
-      <div class="project-media">
-        <!-- Replace with <img class="frame" src="../images/your-image.png" alt="...">
-             A screenshot, an architecture diagram or an API example all work well. -->
-        <div class="frame"><span class="label">screenshot · architecture diagram · API example</span></div>
-      </div>
-    </article>
-
-    <article class="project shell grid">
-      <div class="project-info">
-        <p class="label"><b>//</b> 02 · <span class="placeholder">2025</span></p>
-        <h2><span class="placeholder">Project name</span></h2>
-        <p><span class="placeholder">What it is, what problem it solves and what your part was. Two or three sentences is plenty.</span></p>
-        <dl class="facts">
-          <div><dt>role</dt><dd><span class="placeholder">e.g. backend developer</span></dd></div>
-          <div><dt>stack</dt><dd><span class="placeholder">language, framework, database</span></dd></div>
-          <div><dt>context</dt><dd><span class="placeholder">school project / personal</span></dd></div>
+          <div><dt>role</dt><dd>solo: design, backend &amp; infra</dd></div>
+          <div><dt>stack</dt><dd>C#, .NET, RabbitMQ, Terraform, Azure Container Apps, GitHub Actions</dd></div>
+          <div><dt>context</dt><dd>school project · Software Architecture</dd></div>
         </dl>
       </div>
       <div class="project-media">
@@ -82,13 +60,34 @@
 
     <article class="project shell grid">
       <div class="project-info">
-        <p class="label"><b>//</b> 03 · <span class="placeholder">2025</span></p>
-        <h2><span class="placeholder">Project name</span></h2>
-        <p><span class="placeholder">What it is, what problem it solves and what your part was. Two or three sentences is plenty.</span></p>
+        <p class="label"><b>//</b> 02 · 2026</p>
+        <h2>AI File Analyzer</h2>
+        <p>A retrieval-augmented generation (RAG) tool that answers natural-language questions about your own documents and runs fully locally, so private data never leaves the machine. Documents are parsed with Apache Tika, chunked, embedded and stored in ChromaDB; the most relevant chunks are handed to Llama 3 as context, and it says so when the answer isn't in your files.</p>
         <dl class="facts">
-          <div><dt>role</dt><dd><span class="placeholder">e.g. backend developer</span></dd></div>
-          <div><dt>stack</dt><dd><span class="placeholder">language, framework, database</span></dd></div>
-          <div><dt>context</dt><dd><span class="placeholder">school project / personal</span></dd></div>
+          <div><dt>role</dt><dd>solo</dd></div>
+          <div><dt>stack</dt><dd>Java, Spring AI, Ollama (Llama 3), ChromaDB, Apache Tika, Docker</dd></div>
+          <div><dt>context</dt><dd>personal</dd></div>
+        </dl>
+        <p class="links">
+          <a class="arrow-link" href="https://github.com/arpe18/ai_file_analyzer" target="_blank" rel="noopener">source code</a>
+        </p>
+      </div>
+      <div class="project-media">
+        <!-- Replace with <img class="frame" src="../images/your-image.png" alt="...">
+             A screenshot, an architecture diagram or an API example all work well. -->
+        <div class="frame"><span class="label">screenshot · architecture diagram · API example</span></div>
+      </div>
+    </article>
+
+    <article class="project shell grid">
+      <div class="project-info">
+        <p class="label"><b>//</b> 03 · 2025</p>
+        <h2>Splendor Online</h2>
+        <p>A browser-based multiplayer version of the board game Splendor for up to four players. I worked on the Java server that enforces the rules and turn flow, and designed AI opponents that score every legal move on six weighted heuristics, with the weights tuned by a (1+1) evolution strategy.</p>
+        <dl class="facts">
+          <div><dt>role</dt><dd>backend &amp; game AI</dd></div>
+          <div><dt>stack</dt><dd>Java, JavaScript, HTML, CSS</dd></div>
+          <div><dt>context</dt><dd>school team project</dd></div>
         </dl>
       </div>
       <div class="project-media">
@@ -129,7 +128,7 @@
         <p class="label">// elsewhere</p>
         <ul>
           <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="#"><span class="placeholder">GitHub</span> ↗</a></li>
+          <li><a href="https://github.com/arpe18" target="_blank" rel="noopener">GitHub ↗</a></li>
           <li><a href="contact.html">Email</a></li>
         </ul>
       </div>
