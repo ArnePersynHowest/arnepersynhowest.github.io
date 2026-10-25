@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How I built this site: plain HTML, CSS and JS, hosted for free on GitHub Pages.">
+  <title>How I built this site · Arne Persyn</title>
+  <link href="../../css/style.css" rel="stylesheet">
+  <!-- theme.js has no "defer": it must set light/dark before the page is drawn -->
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/main.js" defer></script>
+</head>
+
+<body data-page="blog">
+  <header class="site-header">
+    <div class="shell">
+      <a class="logo" href="../../index.html">arne<span>.</span>persyn</a>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main">
+          <a href="../about.html" data-page="about">about</a>
+          <a href="../projects.html" data-page="projects">projects</a>
+          <a href="../blog.html" data-page="blog">blog</a>
+          <a href="../cv.html" data-page="cv">experience</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-head post-head">
+      <div class="shell grid">
+        <p class="label"><a href="../blog.html"><b>~/</b>blog</a>/how-i-built-this-site</p>
+        <h1>How I built this site</h1>
+        <div class="post-meta label">
+          <time datetime="2026-10-22">2026-10-22</time>
+          <span>2 min read</span>
+          <span>#tech</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="post-layout shell grid">
+      <aside class="post-aside">
+        <a class="arrow-link" href="../blog.html">all posts</a>
+      </aside>
+
+      <article class="post-body">
+        <p>When I started this site, I had two rules: it had to cost nothing, and it had to feel like me. Here's how it came together.</p>
+
+        <h2>No frameworks, just files</h2>
+        <p>The whole site is plain HTML, CSS and a little bit of JavaScript. No React, no build step, no <code>npm install</code> that pulls in half the internet. Every page is just a file in a folder, so when something looks off, I open the file and fix it. For a personal site with a handful of pages that felt like the right call, and honestly it was a nice change from school projects where the setup takes longer than the actual work.</p>
+
+        <h2>Hosting on GitHub Pages</h2>
+        <p>The code lives in a GitHub repository, and <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> serves it straight from there. It's free, there's no server for me to maintain, and publishing an update is just a push:</p>
+
+        <figure class="code">
+          <figcaption class="code-bar"><span>terminal</span><span>bash</span></figcaption>
+<pre><code><span class="t-com"># publish a change</span>
+git add .
+git commit -m <span class="t-str">"new blog post"</span>
+git push</code></pre>
+        </figure>
+
+        <p>A minute later the change is live. As a student who already spends enough on coffee, free hosting with zero maintenance is hard to beat.</p>
+
+        <h2>A theme that feels like a terminal</h2>
+        <p>I'm into backend development, so I wanted the site to feel like something a developer would build, not a generic portfolio template. That's why there are monospace labels everywhere, paths like <code>~/blog</code> in the page headers, and a little <code>GET /api/me</code> response on the homepage that introduces me as JSON. My contact info even starts with <code>$ ./contact.sh</code>. Small details, but they make browsing the site feel a bit like poking around in a terminal.</p>
+        <p>There's also a light and a dark mode. The toggle sits in the top right, and a tiny script runs before the page is drawn, so you don't get a white flash if you prefer dark mode.</p>
+
+        <blockquote><p>You don't need a framework for a personal site. Plain HTML and CSS get you surprisingly far.</p></blockquote>
+
+        <h2>What I learned</h2>
+        <p>Building without a framework made me appreciate how much modern CSS can do on its own: grid layouts, custom properties for the colors and media queries for mobile all work fine without any extra tools. Next up is filling this blog with write-ups of my projects, so expect more posts soon.</p>
+
+        <div class="post-end">
+          <a class="arrow-link" href="../blog.html">more posts</a>
+          <a class="arrow-link" href="../about.html#contact">get in touch</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="shell grid">
+      <div class="footer-brand">
+        <a class="logo" href="../../index.html">arne<span>.</span>persyn</a>
+        <p>Student developer with a focus on the backend.</p>
+      </div>
+      <div class="footer-col">
+        <p class="label">// pages</p>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../cv.html">Experience</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="label">// elsewhere</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/arpe18" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="../about.html#contact">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom label">
+        <span>© <span class="year">2026</span> Arne Persyn</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

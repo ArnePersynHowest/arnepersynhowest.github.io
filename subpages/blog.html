@@ -20,8 +20,7 @@
           <a href="about.html" data-page="about">about</a>
           <a href="projects.html" data-page="projects">projects</a>
           <a href="blog.html" data-page="blog">blog</a>
-          <a href="cv.html" data-page="cv">cv</a>
-          <a href="contact.html" data-page="contact">contact</a>
+          <a href="cv.html" data-page="cv">experience</a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="Toggle theme">
           <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
@@ -35,7 +34,6 @@
       <div class="shell grid">
         <p class="label"><b>~/</b>blog</p>
         <h1>Blog</h1>
-        <p class="page-intro">Write-ups of things I've built, broken and fixed.</p>
       </div>
     </header>
 
@@ -48,6 +46,7 @@
             <button type="button" data-filter="personal">#personal</button>
             <button type="button" data-filter="school">#school</button>
             <button type="button" data-filter="tech">#tech</button>
+            <button type="button" data-filter="networking">#networking</button>
           </div>
         </div>
         <!--
@@ -57,6 +56,30 @@
           3. Add it to "Latest from the blog" on index.html too
         -->
         <ul class="rows">
+          <li data-tags="networking">
+            <a class="row" href="blog/young-potentials-classes-orbid.html">
+              <time class="label" datetime="2026-10-25">2026-10-25</time>
+              <span class="row-title">Young Potentials Classes at Orbid<small>AI development with C# and .NET, life as a consultant, and bowling.</small></span>
+              <span class="label">#networking</span>
+              <span class="row-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-tags="tech">
+            <a class="row" href="blog/how-i-built-this-site.html">
+              <time class="label" datetime="2026-10-22">2026-10-22</time>
+              <span class="row-title">How I built this site<small>Plain HTML, CSS and JS, hosted for free on GitHub Pages.</small></span>
+              <span class="label">#tech</span>
+              <span class="row-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-tags="networking">
+            <a class="row" href="blog/deloitte-dinner-oude-vismijn.html">
+              <time class="label" datetime="2026-10-15">2026-10-15</time>
+              <span class="row-title">Dinner with Deloitte at the Oude Vismijn<small>A four-course networking dinner in one of Ghent's most historic halls.</small></span>
+              <span class="label">#networking</span>
+              <span class="row-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
           <li data-tags="personal">
             <a class="row" href="blog/welcome.html">
               <time class="label" datetime="2026-10-15">2026-10-15</time>
@@ -70,16 +93,6 @@
     </section>
   </main>
 
-  <section class="cta">
-    <div class="shell">
-      <p class="label"><b>$</b> ./contact.sh</p>
-      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
-      <div class="actions">
-        <a class="btn" href="contact.html">Get in touch →</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-  </section>
 
   <footer class="site-footer">
     <div class="shell grid">
@@ -93,7 +106,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="cv.html">CV</a></li>
+          <li><a href="cv.html">Experience</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -101,12 +114,11 @@
         <ul>
           <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://github.com/arpe18" target="_blank" rel="noopener">GitHub ↗</a></li>
-          <li><a href="contact.html">Email</a></li>
+          <li><a href="about.html#contact">Email</a></li>
         </ul>
       </div>
       <div class="footer-bottom label">
         <span>© <span class="year">2026</span> Arne Persyn</span>
-        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
       </div>
     </div>
   </footer>

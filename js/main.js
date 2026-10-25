@@ -20,6 +20,12 @@ document.querySelectorAll(".year").forEach((el) => {
 const filterButtons = document.querySelectorAll(".filter button");
 const posts = document.querySelectorAll("[data-tags]");
 
+// Hide tags that no post uses yet, so a filter never shows an empty list
+filterButtons.forEach((button) => {
+  const tag = button.dataset.filter;
+  button.hidden = tag !== "all" && ![...posts].some((post) => post.dataset.tags.split(" ").includes(tag));
+});
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const tag = button.dataset.filter;

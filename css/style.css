@@ -837,11 +837,7 @@ a.row:hover .row-arrow {
 }
 
 .project-info {
-  grid-column: 1 / 6;
-}
-
-.project-media {
-  grid-column: 7 / -1;
+  grid-column: 3 / 11;
 }
 
 .project h2 {
@@ -855,8 +851,7 @@ a.row:hover .row-arrow {
 }
 
 @media (max-width: 960px) {
-  .project-info,
-  .project-media {
+  .project-info {
     grid-column: 1 / -1;
   }
 }
@@ -894,52 +889,18 @@ a.row:hover .row-arrow {
   margin: 0;
 }
 
-/* Image slot: replace the div with <img class="frame" src="..." alt="..."> */
-.frame {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  background:
-    radial-gradient(var(--grid-dot) 1px, transparent 1px) 0 0 / 18px 18px,
-    var(--bg-sunk);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 1rem;
-}
-
 /* ---------- About ---------- */
 
 .about {
   row-gap: 2.5rem;
 }
 
-.about-photo {
-  grid-column: 1 / 5;
-  margin: 0;
-}
-
-.portrait {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  background: var(--bg-sunk);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-}
-
-.about-photo figcaption {
-  margin-top: 0.75rem;
-}
-
 .about-text {
-  grid-column: 6 / -1;
+  grid-column: 1 / 10;
 }
 
 .about-text .lead {
-  font-size: var(--fs-h2);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.03em;
@@ -953,13 +914,8 @@ a.row:hover .row-arrow {
 }
 
 @media (max-width: 860px) {
-  .about-photo,
   .about-text {
     grid-column: 1 / -1;
-  }
-
-  .about-photo {
-    max-width: 360px;
   }
 }
 
@@ -990,18 +946,6 @@ a.row:hover .row-arrow {
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }
-}
-
-/* ---------- Contact ---------- */
-
-.big-link {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: clamp(1.5rem, 5vw, 4.25rem);
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  word-break: break-word;
-  border-bottom: 2px solid var(--accent);
 }
 
 /* ---------- Blog post ---------- */
@@ -1103,25 +1047,7 @@ a.row:hover .row-arrow {
   gap: 1.5rem;
 }
 
-/* ---------- CTA + footer ---------- */
-
-.cta {
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid var(--line);
-  background: var(--bg-sunk);
-}
-
-.cta .shell {
-  padding-block: clamp(4.5rem, 9vw, 8rem);
-}
-
-.cta h2 {
-  font-size: var(--fs-h1);
-  letter-spacing: -0.045em;
-  margin: 1rem 0 2rem;
-  max-width: 12em;
-}
+/* ---------- Footer ---------- */
 
 .site-footer .shell {
   padding-block: 2.5rem;
@@ -1199,4 +1125,16 @@ a.row:hover .row-arrow {
   .logo::after {
     animation: none;
   }
+}
+
+/* two portrait photos side by side in a post */
+.post-body .photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.post-body .photo-pair figure {
+  margin: 0;
 }

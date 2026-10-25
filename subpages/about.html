@@ -20,8 +20,7 @@
           <a href="about.html" data-page="about">about</a>
           <a href="projects.html" data-page="projects">projects</a>
           <a href="blog.html" data-page="blog">blog</a>
-          <a href="cv.html" data-page="cv">cv</a>
-          <a href="contact.html" data-page="contact">contact</a>
+          <a href="cv.html" data-page="cv">experience</a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="Toggle theme">
           <span class="icon" aria-hidden="true"></span><span class="theme-label">theme</span>
@@ -41,59 +40,59 @@
 
     <section class="section">
       <div class="shell grid about">
-        <figure class="about-photo">
-          <!-- TODO: add your photo to images/ and change src below -->
-          <img class="portrait" src="../images/profile-placeholder.svg" alt="Portrait of Arne Persyn">
-          <figcaption class="label">// that's me</figcaption>
-        </figure>
         <div class="about-text">
           <p class="lead">I like the backend because that's where the real decisions live: how data flows, how services talk to each other, and what happens when something fails.</p>
           <p>I'm Arne, a third-year Applied Computer Science student at Howest, majoring in Software Engineering. I started out studying Computer Science at Ghent University before moving to Howest.</p>
-          <p>Next to my studies I work part-time at Sempl, where I build features for a smart pool controller across the Go backend and the Flutter app. Seeing code I wrote switch on a real heat pump is still one of the best parts of the job.</p>
-          <p>I graduate in June 2027. Until then I'm always happy to talk about backend engineering, interesting projects, or what comes after my degree.</p>
+          <p>Next to my studies I work part-time at Sempl, where I build features for a smart pool controller across the Go backend and the Flutter app.</p>
+          <p>I graduate in June 2027. Have a project, an internship or a bug to squash? <a href="#contact">Let's talk.</a></p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="contact">
       <div class="shell">
         <div class="section-head">
           <div>
-            <p class="label"><b>//</b> 01</p>
-            <h2>Right now</h2>
+            <p class="label"><b>$</b> ./contact.sh</p>
+            <h2>Contact info</h2>
           </div>
         </div>
         <ul class="rows">
-          <li><div class="row"><span class="label">learning</span><span class="row-title">RAG and running LLMs locally with Spring AI and Ollama</span></div></li>
-          <li><div class="row"><span class="label">building</span><span class="row-title">An offline firmware-update flow for pool pumps at Sempl</span></div></li>
-          <li><div class="row"><span class="label">reading</span><span class="row-title"><span class="placeholder">A book, course or blog you're into</span></span></div></li>
+          <li>
+            <a class="row" href="mailto:arne.persyn@student.howest.be">
+              <span class="label">email</span>
+              <span class="row-title">arne.persyn@student.howest.be</span>
+              <span class="label">quickest</span>
+              <span class="row-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="row" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">
+              <span class="label">linkedin</span>
+              <span class="row-title">in/arne-persyn</span>
+              <span class="label">profile</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a class="row" href="https://github.com/arpe18" target="_blank" rel="noopener">
+              <span class="label">github</span>
+              <span class="row-title">arpe18</span>
+              <span class="label">code</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <div class="row">
+              <span class="label">location</span>
+              <span class="row-title">Belgium</span>
+            </div>
+          </li>
         </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell">
-        <div class="section-head">
-          <div>
-            <p class="label"><b>//</b> 02</p>
-            <h2>Away from the keyboard</h2>
-          </div>
-        </div>
-        <p class="page-intro" style="max-width: 40em">Tennis, mostly. I've been a tennis coach since 2018 and have coached more than 140 players, from kids picking up a racket for the first time to experienced club players. Explaining the same thing five different ways until it clicks turns out to be useful in software too. From 2020 to 2024 I was also a member of Rotaract, where I ran the club's website and helped organize charity events.</p>
       </div>
     </section>
   </main>
 
-  <section class="cta">
-    <div class="shell">
-      <p class="label"><b>$</b> ./contact.sh</p>
-      <h2>Have a project, an internship or a bug to squash? <span class="accent">Let's talk.</span></h2>
-      <div class="actions">
-        <a class="btn" href="contact.html">Get in touch →</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-  </section>
 
   <footer class="site-footer">
     <div class="shell grid">
@@ -107,7 +106,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="cv.html">CV</a></li>
+          <li><a href="cv.html">Experience</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -115,12 +114,11 @@
         <ul>
           <li><a href="https://www.linkedin.com/in/arne-persyn-6748ba287/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://github.com/arpe18" target="_blank" rel="noopener">GitHub ↗</a></li>
-          <li><a href="contact.html">Email</a></li>
+          <li><a href="#contact">Email</a></li>
         </ul>
       </div>
       <div class="footer-bottom label">
         <span>© <span class="year">2026</span> Arne Persyn</span>
-        <span>Built with plain HTML, CSS &amp; JS. No frameworks.</span>
       </div>
     </div>
   </footer>
